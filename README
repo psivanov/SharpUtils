@@ -1,0 +1,38 @@
+SharpUtils Library
+
+
+Data Classes:
+
+	MultiSet<T> - C# implementation of std::multiset (<a href="http://www.cplusplus.com/reference/set/multiset/">link</a>)
+
+	Trie<T> - prefix tree (<a href="http://en.wikipedia.org/wiki/Trie">link</a>)
+
+	SegTree<T> - segment (interval) tree, which allows custom assocciative function (<a href="http://en.wikipedia.org/wiki/Segment_tree">link</a>)
+
+	Heap<T> - heap (<a href="http://en.wikipedia.org/wiki/Heap_(data_structure)">link</a>)
+	
+	Complex - complex number implementation with operator overloads
+
+Algorithms:
+	
+	FFT - Fast Fourier Transform (<a href="http://en.wikipedia.org/wiki/Fast_Fourier_transform">link</a>)
+	
+	Graph:
+		Dijkstra - single source shortest path (<a href="http://en.wikipedia.org/wiki/Dijkstra's_algorithm">link</a>)
+		
+		Dinitz - maximum flow in O(V^2 * E) (<a href="http://en.wikipedia.org/wiki/Dinic's_algorithm">link</a>)
+		
+		FloydWarshal - all pairs shortest paths (<a href="http://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm">link</a>)
+		
+	Combinatorics:
+		inversion count, next permutation 		
+		
+	Number Theory:
+		base conversion, euler totient funtion, prime factorization, greatest common divisor, fast exponentiation
+	
+	Geometry:
+		area, line intersection, linear transformation, distance from point to line
+	
+	String:
+		ZFunc - Z algorithm (<a href="http://codeforces.com/blog/entry/3107">link</a>)
+				
