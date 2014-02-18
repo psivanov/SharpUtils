@@ -8,8 +8,8 @@
     <ProjectGuid>{7FFCF70D-C8F4-4331-9EDE-0BE6A429F2C0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Utils</RootNamespace>
-    <AssemblyName>Utils</AssemblyName>
+    <RootNamespace>SharpUtils</RootNamespace>
+    <AssemblyName>SharpUtils</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
