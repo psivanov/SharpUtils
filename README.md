@@ -8,6 +8,8 @@ C# Data Structures and Algorithm Library
 
 - Trie<T> - prefix tree [link](http://en.wikipedia.org/wiki/Trie)
 
+- SuffixTree<T> - suffix tree with O(n) construction [link](http://www.cise.ufl.edu/~sahni/dsaaj/enrich/c16/suffix.htm) [link](http://stackoverflow.com/questions/9452701/ukkonens-suffix-tree-algorithm-in-plain-english)
+
 - SegTree<T> - segment (interval) tree, which allows custom associative function [link](http://en.wikipedia.org/wiki/Segment_tree)
 
 - Heap<T> - heap [link](http://en.wikipedia.org/wiki/Heap_(data_structure))
@@ -36,4 +38,5 @@ C# Data Structures and Algorithm Library
 
 - String:
   - ZFunc - Z algorithm [link](http://codeforces.com/blog/entry/3107)
+  - MaxCommonSubstring - longest common substring for up to 64 words in O(n) [link](http://en.wikipedia.org/wiki/Longest_common_substring_problem)
 				

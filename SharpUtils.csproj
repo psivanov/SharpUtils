@@ -65,11 +65,13 @@
     <Compile Include="Alg\NumTheory\Factors.cs" />
     <Compile Include="Alg\NumTheory\GCD.cs" />
     <Compile Include="Alg\NumTheory\Pow.cs" />
+    <Compile Include="Alg\String\MaxCommonSubstring.cs" />
     <Compile Include="Alg\String\ZFunc.cs" />
     <Compile Include="Data\Complex.cs" />
     <Compile Include="Data\Heap.cs" />
     <Compile Include="Data\MultiSet.cs" />
     <Compile Include="Data\SegTree.cs" />
+    <Compile Include="Data\SuffixTree.cs" />
     <Compile Include="Data\Trie.cs" />
     <Compile Include="Data\Tuple.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
