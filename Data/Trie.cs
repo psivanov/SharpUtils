@@ -27,12 +27,34 @@ namespace Utils.Data
                 current.IsWord = true;
         }
 
+        public bool RemoveWord(IEnumerable<T> word)
+        {
+            var node = GetPrefixNode(word);
+            if (node == null) return false;
+
+            bool result = node.IsWord;
+            node.IsWord = false;
+
+            //remove if needed
+            if (node.Children.Count == 0)
+            {
+                T value = node.Value;
+                for (node = node.Parent; node.Parent != null && !node.IsWord && node.Children.Count == 1; node = node.Parent)
+                {
+                    value = node.Value;
+                }
+                node.Children.Remove(value);
+            }
+
+            return result;
+        }
+
         public Trie<T> GetPrefixNode(IEnumerable<T> prefix)
         {
             Trie<T> current = this;
             foreach (T c in prefix)
             {
-                if(!current.Children.TryGetValue(c, out current))
+                if (!current.Children.TryGetValue(c, out current))
                     return null;
             }
             return current;
@@ -46,23 +68,22 @@ namespace Utils.Data
 
         public IEnumerable<T> GetWord()
         {
-            IEnumerable<T> ret = Enumerable.Empty<T>();
             if (Parent != null)
             {
-                ret = ret.Concat(Parent.GetWord());
-                ret = ret.Concat(new T[] { Value });
+                foreach (T ch in Parent.GetWord())
+                    yield return ch;
+
+                yield return Value;
             }
-            return ret;
         }
 
         public IEnumerable<Trie<T>> GetWordNodes()
         {
-            IEnumerable<Trie<T>> ret = Enumerable.Empty<Trie<T>>();
             if (IsWord)
-                ret = ret.Concat(new Trie<T>[] { this });
-            foreach (Trie<T> t in Children.Values)
-                ret = ret.Concat(t.GetWordNodes());
-            return ret;
+                yield return this;
+            foreach (Trie<T> child in Children.Values)
+                foreach (Trie<T> word in child.GetWordNodes())
+                    yield return word;
         }
     }
 }
