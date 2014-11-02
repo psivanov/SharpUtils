@@ -4,6 +4,8 @@ C# Data Structures and Algorithm Library
 
 ###Data Classes:
 
+- DisjointSet - disjoint-set with almost constant amortized time per operation [link](http://en.wikipedia.org/wiki/Disjoint-set_data_structure)
+
 - MultiSet<T> - C# implementation of std::multiset [link](http://www.cplusplus.com/reference/set/multiset/)
 
 - Trie<T> - prefix tree [link](http://en.wikipedia.org/wiki/Trie)

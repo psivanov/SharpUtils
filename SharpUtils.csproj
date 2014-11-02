@@ -68,6 +68,7 @@
     <Compile Include="Alg\String\MaxCommonSubstring.cs" />
     <Compile Include="Alg\String\ZFunc.cs" />
     <Compile Include="Data\Complex.cs" />
+    <Compile Include="Data\DisjointSet.cs" />
     <Compile Include="Data\Heap.cs" />
     <Compile Include="Data\MultiSet.cs" />
     <Compile Include="Data\SegTree.cs" />
