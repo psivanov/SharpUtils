@@ -76,39 +76,44 @@ namespace Utils.Data
             return max;
         }
 
-        protected void Update(T old, T value)
+        public void Update(T old, T value)
         {
-            int i = inverse[value];
-            if ((!minHeap && heap[i].CompareTo(value) > 0) || (minHeap && heap[i].CompareTo(value) < 0))
+            int i = -1;
+            if (old.CompareTo(value) != 0 && inverse.TryGetValue(old, out i))
             {
+                inverse.Remove(old);
+
                 heap[i] = value;
                 inverse[value] = i;
-                Heapify(i);
-            }
-            else
-            {
-                heap[i] = value;
-                while (i > 1 && ((!minHeap && heap[i].CompareTo(heap[P(i)]) > 0) || (minHeap && heap[i].CompareTo(heap[P(i)]) < 0)))
+
+                if ((!minHeap && old.CompareTo(value) > 0) || (minHeap && old.CompareTo(value) < 0))
                 {
-                    Swap(i, P(i));
-                    i = P(i);
+                    Heapify(i);
+                }
+                else
+                {
+                    while (i > 1 && ((!minHeap && heap[i].CompareTo(heap[P(i)]) > 0) || (minHeap && heap[i].CompareTo(heap[P(i)]) < 0)))
+                    {
+                        Swap(i, P(i));
+                        i = P(i);
+                    }
                 }
             }
         }
 
-        private int P(int i)
+        protected int P(int i)
         {
             return i / 2;
         }
-        private int L(int i)
+        protected int L(int i)
         {
             return 2 * i;
         }
-        private int R(int i)
+        protected int R(int i)
         {
             return 2 * i + 1;
         }
-        private void Heapify(int i)
+        protected void Heapify(int i)
         {
             int max = i;
             int l = L(i);
@@ -124,7 +129,7 @@ namespace Utils.Data
             }
         }
 
-        private void Swap(int i, int j)
+        protected void Swap(int i, int j)
         {
             T ti = heap[i];
             T tj = heap[j];
@@ -134,10 +139,10 @@ namespace Utils.Data
             inverse[tj] = i;
         }
 
-        private T[] heap;
-        private Dictionary<T, int> inverse = new Dictionary<T, int>();
-        private int size;
-        private bool minHeap;
+        protected T[] heap;
+        protected Dictionary<T, int> inverse = new Dictionary<T, int>();
+        protected int size;
+        protected bool minHeap;
     }
 
     public class HeapNode<D, P> : IComparable<HeapNode<D, P>> where P : IComparable<P>
@@ -154,6 +159,16 @@ namespace Utils.Data
         public int CompareTo(HeapNode<D, P> other)
         {
             return Priority.CompareTo(other.Priority);
+        }
+
+        public override bool Equals(object obj)
+        {
+            return obj is HeapNode<D, P> && object.Equals(Data, ((HeapNode<D, P>)obj).Data);
+        }
+
+        public override int GetHashCode()
+        {
+            return object.Equals(Data, default(D)) ? 0 : Data.GetHashCode();
         }
 
         public override string ToString()
@@ -199,8 +214,23 @@ namespace Utils.Data
             if (lookup.ContainsKey(data))
             {
                 var node = lookup[data];
+                P oldPriority = node.Priority;
+
+                int i = inverse[node];
                 node.Priority = priority;
-                Update(node, node);
+
+                if ((!minHeap && oldPriority.CompareTo(priority) > 0) || (minHeap && oldPriority.CompareTo(priority) < 0))
+                {
+                    Heapify(i);
+                }
+                else
+                {
+                    while (i > 1 && ((!minHeap && heap[i].CompareTo(heap[P(i)]) > 0) || (minHeap && heap[i].CompareTo(heap[P(i)]) < 0)))
+                    {
+                        Swap(i, P(i));
+                        i = P(i);
+                    }
+                }
             }
         }
 
