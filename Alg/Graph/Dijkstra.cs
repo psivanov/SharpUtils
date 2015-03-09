@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Utils.Data;
 
 namespace Utils
 {
     public static partial class Alg
     {
-        public static void Dijkstra(Dictionary<int, int>[] adj, int source, out int[] dist, out int[] pred)
+        public static void Dijkstra(List<Tuple<int, int>>[] adj, int source, out int[] dist, out int[] pred)
         {
             int inf = int.MaxValue;
             int N = adj.Length;
@@ -24,8 +25,8 @@ namespace Utils
                 if (dist[u] != heap.Pop().Priority) continue;
                 foreach (var tuple in adj[u])
                 {
-                    int v = tuple.Key;
-                    int uvWeight = tuple.Value;
+                    int v = tuple.Item1;
+                    int uvWeight = tuple.Item2;
                     if (dist[v] > dist[u] + uvWeight)
                     {
                         dist[v] = dist[u] + uvWeight;
