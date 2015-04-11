@@ -18,6 +18,8 @@ C# Data Structures and Algorithm Library
 	
 - Complex - complex number implementation with operator overloads
 
+- Quaternion - quaternion implementation with operator overloads
+
 ###Algorithms:
 	
 - FFT - Fast Fourier Transform [link](http://en.wikipedia.org/wiki/Fast_Fourier_transform)

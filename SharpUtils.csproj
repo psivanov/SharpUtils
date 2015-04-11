@@ -71,6 +71,7 @@
     <Compile Include="Data\DisjointSet.cs" />
     <Compile Include="Data\Heap.cs" />
     <Compile Include="Data\MultiSet.cs" />
+    <Compile Include="Data\Quaternion.cs" />
     <Compile Include="Data\SegTree.cs" />
     <Compile Include="Data\SuffixTree.cs" />
     <Compile Include="Data\Trie.cs" />

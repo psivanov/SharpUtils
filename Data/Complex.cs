@@ -105,9 +105,11 @@ namespace Utils.Data
 
         public override string ToString()
         {
-            if (Im < 0) return string.Format("{0}{1}i", Re, Im);
-            if (Im > 0) return string.Format("{0}+{1}i", Re, Im);
-            return Re.ToString();
+            string s = "";
+            if (Re != 0) s += string.Format("{0:+0.##;-0.##}", Re);
+            if (Im == -1.0) s += "-i"; else if (Im == 1.0) s += "i"; else if (Im != 0) s += string.Format("{0:+0.##;-0.##}i", Im);
+            if (s.Length == 0) return "0";
+            return s.TrimStart('+');
         }
     }
 }
