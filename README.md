@@ -32,12 +32,14 @@ C# Data Structures and Algorithm Library
   - FloydWarshal - all pairs shortest paths [link](http://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm)
 		
 - Combinatorics: 
-  - inversion count, next permutation 		
+  - inversion count, next permutation
 		
 - Number Theory:
   - base conversion, Euler totient function, prime factorization, greatest common divisor, fast exponentiation
 	
 - Geometry:
+  - Convex hull - Andrew's algorithm in O(n log n) [link](http://en.wikibooks.org/wiki/Algorithm_Implementation/Geometry/Convex_hull/Monotone_chain)
+  
   - area, line intersection, linear transformation, distance from point to line
 
 - String:
