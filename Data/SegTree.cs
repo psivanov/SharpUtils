@@ -7,17 +7,19 @@ namespace Utils.Data
 {
     public class SegTree<T>
     {
-        public SegTree(IList<T> data, Func<T, T, T> assoc)
+        public SegTree(int N, Func<T, T, T> assoc, IEnumerable<T> data = null)
         {
+            this.N = N;
             this.assoc = assoc;
-            N = data.Count;
             D = 1;
             for (int tmp = 1; tmp < N; tmp <<= 1) ++D;
             theTree = new T[N, D];
 
-            for (int i = 0; i < N; i++)
+            if (data != null)
             {
-                theTree[i, 0] = data[i];
+                int ind = 0;
+                foreach (T item in data.Take(N))
+                    theTree[ind++, 0] = item;
             }
 
             for (int d = 1; d < D; d++)

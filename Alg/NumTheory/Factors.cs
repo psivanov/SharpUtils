@@ -32,5 +32,12 @@ namespace Utils
             }
             return ret;
         }
+
+        public static bool IsPrime(long n)
+        {
+            for (long p = 2L; p * p <= n; ++p)
+                if (n % p == 0) return false;
+            return true;
+        }
     }
 }
