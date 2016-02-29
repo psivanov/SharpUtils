@@ -10,7 +10,7 @@ namespace Utils
     {
         //Finds the longest common substring in a list of words.
         //Maximum number of words: 64
-        //If there are more than one substrings, it returns the one tht appears first in the first word.
+        //If there are more than one substrings, it returns the one that appears first in the first word.
         public class MaxCommonSubstring<T>
         {
             public MaxCommonSubstring(int textCapacity = 1000)

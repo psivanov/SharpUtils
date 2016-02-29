@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Alg\Analysis\FFT.cs" />
+    <Compile Include="Alg\Array\RMQ.cs" />
     <Compile Include="Alg\Combinarotics\InversionCount.cs" />
     <Compile Include="Alg\Combinarotics\Permutation.cs" />
     <Compile Include="Alg\Geom\AreaPoly2D.cs" />
@@ -66,8 +67,8 @@
     <Compile Include="Alg\NumTheory\Factors.cs" />
     <Compile Include="Alg\NumTheory\GCD.cs" />
     <Compile Include="Alg\NumTheory\Pow.cs" />
-    <Compile Include="Alg\String\MaxCommonSubstring.cs" />
-    <Compile Include="Alg\String\ZFunc.cs" />
+    <Compile Include="Alg\Array\MaxCommonSubstring.cs" />
+    <Compile Include="Alg\Array\ZFunc.cs" />
     <Compile Include="Data\Complex.cs" />
     <Compile Include="Data\DisjointSet.cs" />
     <Compile Include="Data\Heap.cs" />

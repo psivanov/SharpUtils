@@ -7,7 +7,7 @@ namespace Utils
 {
     public static partial class Alg
     {
-        public static void ZFunc(char[] s, int n, int[] Z)
+        public static void ZFunc<T>(IList<T> s, int n, int[] Z)
         {
             if (n > 0)
             {

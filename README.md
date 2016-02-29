@@ -42,7 +42,8 @@ C# Data Structures and Algorithm Library
   
   - area, line intersection, linear transformation, distance from point to line
 
-- String:
+- Arrays:
+  - RMQ - range minimal query (with sparse table) in O(1) query time and O(n log n) preprocessing time
   - ZFunc - Z algorithm [link](http://codeforces.com/blog/entry/3107)
   - MaxCommonSubstring - longest common substring for up to 64 words in O(n) [link](http://en.wikipedia.org/wiki/Longest_common_substring_problem)
 				
