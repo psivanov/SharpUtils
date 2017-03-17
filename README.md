@@ -4,23 +4,23 @@ C# Data Structures and Algorithm Library
 
 ### Data Classes:
 
-- Complex - complex number implementation with operator overloads
+- `Complex` - complex number implementation with operator overloads
 
-- DisjointSet - disjoint-set with almost constant amortized time per operation [link](http://en.wikipedia.org/wiki/Disjoint-set_data_structure)
+- `DisjointSet` - disjoint-set with almost constant amortized time per operation [link](http://en.wikipedia.org/wiki/Disjoint-set_data_structure)
 
-- Heap<T> - heap [link](http://en.wikipedia.org/wiki/Heap_(data_structure))
+- `Heap<T>` - heap [link](http://en.wikipedia.org/wiki/Heap_(data_structure))
 
-- MultiSet<T> - C# implementation of std::multiset [link](http://www.cplusplus.com/reference/set/multiset/)
+- `MultiSet<T>` - C# implementation of std::multiset [link](http://www.cplusplus.com/reference/set/multiset/)
 
-- Quaternion - quaternion implementation with operator overloads
+- `Quaternion` - quaternion implementation with operator overloads
 
-- RBTree<K, V, A> - red-black tree with augmentation [link](https://en.wikipedia.org/wiki/Introduction_to_Algorithms)
+- `RBTree<K, V, A>` - red-black tree with augmentation [link](https://en.wikipedia.org/wiki/Introduction_to_Algorithms)
 
-- SegTree<T> - segment (interval) tree, which allows custom associative function [link](http://en.wikipedia.org/wiki/Segment_tree)
+- `SegTree<T>` - segment (interval) tree, which allows custom associative function [link](http://en.wikipedia.org/wiki/Segment_tree)
 
-- SuffixTree<T> - suffix tree with O(n) construction [link](http://www.cise.ufl.edu/~sahni/dsaaj/enrich/c16/suffix.htm) [link](http://stackoverflow.com/questions/9452701/ukkonens-suffix-tree-algorithm-in-plain-english)
+- `SuffixTree<T>` - suffix tree with O(n) construction [link](http://www.cise.ufl.edu/~sahni/dsaaj/enrich/c16/suffix.htm) [link](http://stackoverflow.com/questions/9452701/ukkonens-suffix-tree-algorithm-in-plain-english)
 
-- Trie<T> - prefix tree [link](http://en.wikipedia.org/wiki/Trie)
+- `Trie<T>` - prefix tree [link](http://en.wikipedia.org/wiki/Trie)
 
 ### Algorithms:
 	
